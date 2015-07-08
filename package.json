@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Tyler Powers / @gr4yscale",
   "license": "ISC",
+  "scripts": {
+    "start": "budo index.js:js/bundle.js -t glslify -v --live | garnish",
+    "build": "browserify -t glslify index.js | uglifyjs -cm > js/bundle.js"
+  },
   "devDependencies" : {
     "browserify": "^10.2.3",
     "budo": "^4.0.0",
